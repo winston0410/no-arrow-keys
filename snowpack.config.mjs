@@ -20,8 +20,12 @@ export default {
     // {"match": "routes", "src": ".*", "dest": "/index.html"},
   ],
   optimize: {
-    /* Example: Bundle your final build: */
-    // "bundle": true,
+    minify: true,
+    bundle: true,
+    target: "es2020",
+    treeshake: true,
+    sourcemap: true,
+    entrypoints: ["src/index.ts", "src/background.ts", "src/injection.ts"],
   },
   packageOptions: {
     /* ... */
