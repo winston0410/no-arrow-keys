@@ -24,7 +24,7 @@ export default {
     bundle: true,
     target: "es2020",
     treeshake: true,
-    sourcemap: true,
+    sourcemap: false,
     entrypoints: ["src/index.ts", "src/background.ts", "src/injection.ts"],
   },
   packageOptions: {

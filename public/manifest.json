@@ -16,5 +16,22 @@
       "matches": ["https://*/*"],
       "js": ["dist/injection.js"]
     }
-  ]
+  ],
+  "commands": {
+    "select-prev": {
+      "suggested_key": {
+        "default": "Alt+P",
+        "mac": "Alt+P"
+      },
+      "description": "Select prev item"
+    },
+    "select-next": {
+      "suggested_key": {
+        "default": "Alt+N",
+        "mac": "Alt+N"
+      },
+      "description": "Select next item"
+    }
+  },
+  "permissions": ["activeTab"]
 }

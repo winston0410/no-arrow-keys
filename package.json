@@ -2,6 +2,7 @@
   "scripts": {
     "start": "snowpack dev",
     "build": "snowpack build",
+    "build:watch": "snowpack build --watch",
     "test": "web-test-runner \"src/**/*.test.ts\""
   },
   "dependencies": {
