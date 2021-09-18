@@ -2,6 +2,7 @@
   import {onMount} from 'svelte'
   import "modern-css-reset"
   import "./app.css";
+  import ProhibitedLink from './ProhibitedLink.svelte'
   //  Cannot bundle correctly with esbuild right now
   //  import pkg from "../public/manifest.json"
 </script>
@@ -89,6 +90,7 @@
             <ul class="nav-list" role="list">
                 <!--  <li class="nav-item">  -->
                     <!--  <a class="customize-link" target="_blank" href="chrome://extensions/shortcuts">Customize keybindings</a>  -->
+                    <!--  <ProhibitedLink link={"chrome://extensions/shortcuts"} text="Customize keybindings"/>  -->
                 <!--  </li>  -->
                 <li class="nav-item">
                     <a class="customize-link" target="_blank" href="https://github.com/winston0410/no-arrow-keys">Read more about this project in Github</a>
