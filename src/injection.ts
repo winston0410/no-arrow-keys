@@ -14,6 +14,8 @@ const sendKeyboardEvent = (elem: Element, code: KeyboardEvent["code"]) => {
 
 const enableElems: IenableElems = {
   INPUT: true,
+  TEXTAREA: true,
+  SELECT: true
 };
 
 browser.runtime.onMessage.addListener((request) => {
@@ -30,13 +32,13 @@ browser.runtime.onMessage.addListener((request) => {
   switch (request.command) {
     case "select-prev": {
       const ok = sendKeyboardEvent(focusedElem, "ArrowUp");
+      console.log("check if ok select-next", ok);
       break;
     }
 
     case "select-next": {
       const ok = sendKeyboardEvent(focusedElem, "ArrowDown");
-
-      console.log("check if ok", ok);
+      console.log("check if ok select-next", ok);
       break;
     }
   }
