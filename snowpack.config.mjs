@@ -26,6 +26,7 @@ export default {
     treeshake: true,
     sourcemap: false,
     entrypoints: ["src/index.ts", "src/background.ts", "src/injection.ts"],
+    loader: { '.json': 'json' },
   },
   packageOptions: {
     /* ... */

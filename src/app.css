@@ -1,0 +1,50 @@
+:root{
+    /* 1.2 ratio */
+    --xxs: 0.694;
+    --xs: 0.833;
+    /* 1.4 ratio */
+    --sm: 1;
+    --md: 1.4;
+    --lg: 1.96;
+    --xl: 2.744;
+    --xxl: 3.842;
+}
+
+/* space */
+:root{
+    --space-base-value: calc(var(--font-base-value) / 2);
+    --xs-space: calc(var(--xs) * var(--space-base-value));
+    --sm-space: calc(var(--sm) * var(--space-base-value));
+    --md-space: calc(var(--md) * var(--space-base-value));
+    --lg-space: calc(var(--lg) * var(--space-base-value));
+    --xl-space: calc(var(--xl) * var(--space-base-value));
+    --xxl-space: calc(var(--xxl) * var(--space-base-value));
+}
+
+/* font-family */
+:root {
+    /* --display-font: neoneon; */
+    --display-font: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --content-font: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+/* font-size */
+:root{
+    --font-base-value: 16px;
+    --xxs-font: calc(var(--xxs) * var(--font-base-value));
+    --xs-font: calc(var(--xs) * var(--font-base-value));
+    --sm-font: calc(var(--sm) * var(--font-base-value));
+    --md-font: calc(var(--md) * var(--font-base-value));
+    --lg-font: calc(var(--lg) * var(--font-base-value));
+    --xl-font: calc(var(--xl) * var(--font-base-value));
+    --xxl-font: calc(var(--xxl) * var(--font-base-value));
+}
+
+:root{
+    --base-color-shade1: hsla(50, 10%, 10%, 1);
+    --base-color: hsla(50, 10%, 11%, 1);
+    --base-contrast-color: hsla(50, 5%, 90%, 1);
+    --highlight-color: hsla(45, 98%, 50%, 1);
+    --highlight-color-tint1: hsla(45, 98%, 75%, 1);
+    --highlight-color-tint2: hsla(45, 98%, 85%, 1);
+}

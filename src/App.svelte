@@ -1,76 +1,106 @@
 <script lang="ts">
   import {onMount} from 'svelte'
-
-  let count: number = 0
-  onMount(() => {
-    const interval = setInterval(() => count++, 1000)
-    return () => {
-      clearInterval(interval)
-    }
-  })
+  import "modern-css-reset"
+  import "./app.css";
+  //  Cannot bundle correctly with esbuild right now
+  //  import pkg from "../public/manifest.json"
 </script>
 
 <style>
-  :global(body) {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-  }
+    :global(body){
+        width: 400px;
+        height: 400px;
+        background-color: var(--base-color);
+        margin: 0px;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
 
-  .App {
-    text-align: center;
-  }
+    a {
+       color: var(--highlight-color);
+       text-decoration: none;
+    }
+        
+    a:hover {
+       color: var(--highlight-color-tint1);
+    }
 
-  .App code {
-    background: #0002;
-    padding: 4px 8px;
-    border-radius: 4px;
-  }
+    main{
+        padding: 0 var(--lg-space);
+    }
 
-  .App p {
-    margin: 0.4rem;
-  }
-
-  .App-header {
-    background-color: #f9f6f6;
-    color: #333;
-    min-height: 100vh;
+    section{
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-  }
-
-  .App-link {
-    color: #ff3e00;
-  }
-
-  .App-logo {
-    height: 36vmin;
-    pointer-events: none;
-    margin-bottom: 3rem;
-    animation: App-logo-spin infinite 1.6s ease-in-out alternate;
-  }
-
-  @keyframes App-logo-spin {
-    from {
-      transform: scale(1);
+    flex-direction: column;
+    color: var(--base-contrast-color);
+    margin-bottom: var(--md-space);
     }
-    to {
-      transform: scale(1.06);
+        
+    footer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: var(--md-space);
+    color: var(--base-contrast-color);
     }
-  }
+
+    .title-heading{
+    font-size: var(--lg-font);
+    font-family: var(--display-font);
+    font-weight: 700;
+    color: var(--base-contrast-color);
+    margin-bottom: var(--lg-space);
+    }
+
+    :global(ul[role="list"]){
+        padding: 0;
+        margin: 0;
+    }
+
+    .nav-list{
+        display: grid;
+        grid-row-gap: var(--sm-space);
+    }
+
+    .nav-item{
+        text-align: center;
+        font-size: var(--sm-font);
+    }
+
+    .remark{
+        font-size: var(--sm-font);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .portfolio-link{
+        font-weight: 700;
+    }
 </style>
 
-<div class="App">
-  <header class="App-header">
-    <img src="/logo.svg" class="App-logo" alt="logo"/>
-    <p>Edit <code>src/App.svelte</code> and save to reload.</p>
-    <p>Page has been open for <code>{count}</code> seconds.</p>
-    <p>
-      <a class="App-link" href="https://svelte.dev" target="_blank" rel="noopener noreferrer">
-        Learn Svelte
-      </a>
-    </p>
-  </header>
-</div>
+<main>
+    <section>
+        <h1 class="title-heading">No Arrow Keys</h1>
+        <nav>
+            <ul class="nav-list" role="list">
+                <!--  <li class="nav-item">  -->
+                    <!--  <a class="customize-link" target="_blank" href="chrome://extensions/shortcuts">Customize keybindings</a>  -->
+                <!--  </li>  -->
+                <li class="nav-item">
+                    <a class="customize-link" target="_blank" href="https://github.com/winston0410/no-arrow-keys">Read more about this project in Github</a>
+                </li>
+            </ul>
+        </nav>
+    </section>
+    <footer>
+        <p class="remark">
+          <span>This extension is created by</span>
+          <a class="portfolio-link" target="_blank" href="https://hugosum.me">Hugo Sum</a>
+          <span>a fullstack developer from Hong Kong.<span>
+        </p>
+    </footer>
+</main>
